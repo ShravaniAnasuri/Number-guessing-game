@@ -1,0 +1,45 @@
+//number guessing game
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int a=rand()%100;
+    cout<<"You have only five guess!!\n";
+    int n;
+    cout<<"enter your guess ";
+    cin>>n;
+    
+    if(a==n){
+        cout<<"your guess is correct ";
+    }
+    
+    else{  
+        if(a<n){
+        cout<<"your number was high\n";
+        }
+        
+        else{
+        cout<<"\tyour number was low\n";
+        }
+    
+    do{
+        cout<<"another number ";
+        cin>>n;
+        
+        if(a==n){
+            cout<<"your are correct\n";
+        }
+        
+        else if(a!=n && a<n){
+        cout<<"your number was high\n";
+        }
+        
+        else{
+        cout<<"\tyour number was low\n";
+        }
+        
+    }while(a!=n);
+}
+    return 0;
+}
